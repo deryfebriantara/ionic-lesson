@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nama</ion-label>
+    <ion-input [(ngModel)]="nama"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Umur</ion-label>
+    <ion-input [(ngModel)]="umur"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button expand="block" (click)="tambah()">tambah</ion-button>
+  </ion-item>
+  <ion-item *ngFor="let p of people">
+    <ion-row>
+      <ion-col>
+        nama
+      </ion-col>
+      <ion-col>
+        {{p.nama}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        umur
+      </ion-col>
+      <ion-col>
+        {{p.umur}}
+      </ion-col>
+    </ion-row>
+  </ion-item>
+</ion-content>
+
